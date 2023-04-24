@@ -1,0 +1,32 @@
+<%- include("partials/header.ejs") %>
+<div class="mainimg rounded-5 my-5" style="background-image: url('images/divimg.jpg');">
+    Read My Blogs
+</div>
+
+<p class="my-4">WEEKLY ARTICLES WITH INSIGHT INTO THE WEEKEND'S MESSAGE</p>
+
+
+<label for="blogcointainer" class="form-label fs-2">Latest Blogs</label>
+<div id="blogcointainer" class=" blogcontainer  ">
+    <% homepost.forEach((e)=>{ %>
+        <div class="card m-3" style="min-width: 540px;">
+            <div class="row g-0">
+              <!-- <div class="col-md-4">
+                <img src= class="img-fluid rounded-start" alt="...">
+              </div> -->
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title"><%= e.title %></h5>
+                  <p class="card-text"><%= e.content.slice(0,100) %> <a href=>Read More</a></p>
+                  <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
+                </div>
+              </div>
+            </div>
+          </div>
+       <% }) %>
+
+</div>
+
+
+
+<%- include("partials/footer.ejs") %>
